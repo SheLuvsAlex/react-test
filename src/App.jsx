@@ -1,11 +1,11 @@
 import React from 'react';
-import './App.css';
+import Test from './components/test';
 
 function App() {
   return (
-    <main>
-      React⚛️ + Vite⚡ + Replit🌀
-    </main>
+    <Test/>
+     
+    
   );
 }
 
