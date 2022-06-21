@@ -3,9 +3,12 @@ import Test from './components/test';
 
 function App() {
   return (
-    <Test/>
+    <>
+    <Test name={'mrs. roy'} color = {'green'}/>
+    <Test name={'mrs. alrx'} color = {'yellow'}/>
+      <Test name={'max'} color = {'pink'}/>
      
-    
+    </>
   );
 }
 
