@@ -1,11 +1,13 @@
 import React from 'react';
 import Test from './components/test';
+import Navbar from './components/navbar';
 import Landing from './components/landing';
 
 
 function App() {
   return (
     <>
+      <Navbar/>
   <Landing/>
       
      

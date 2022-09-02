@@ -28,7 +28,7 @@ export default Landing;
 const Container = styled.div`
   height: 100vh;
   width: 100vw;
-  background-color: red;
+  
   
 `
 const Wraper = styled.div`
@@ -37,8 +37,12 @@ const Wraper = styled.div`
 `
 const ImageBG = styled.img`
  
-  max-width: 100%;
-  height: 100%;
+  
+  object-fit: cover;
+  width:100vw;
+  height: 100vh;
+  
+  
 
 `
 const ArrowGroup = styled.div`
@@ -59,4 +63,5 @@ padding: 1.5%;
 &:hover{
   cursor: pointer;
 }
+  
 `
