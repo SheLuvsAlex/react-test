@@ -20,6 +20,8 @@ export default Navbar;
 const NavContainer = styled.div`
 overflow: hidden;
   background-color: White;
+  
+  
 
  
   `
@@ -35,6 +37,23 @@ const Navlink = styled.a`
   &: hover{
     color: #64AED9
   }
+    var navbar = document.getElementById("Navlink");
+var sticky = Navlink.offsetTop;
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+  &:sticky{
+    position: fixed;
+  top: 0;
+  width: 100%;
+    padding-top: 60px;
+  }
   
+  
+
   
 `
