@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import React from 'react'
+import {BsCodeSlash} from 'react-icons/bs'
 
 function About() {
 
@@ -23,6 +24,13 @@ function About() {
 
         <Imgwrap>
           <Img src={'trio.png'} />
+          <Circle>
+           
+            <Icon/>
+            <Circletext>
+                Development
+            </Circletext>
+          </Circle>
         </Imgwrap>
         
       </Wrapper>
@@ -35,9 +43,10 @@ export default About;
 
 const Container = styled.div`
 height: 700px;
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   min-width: 600px;
+  max-width: 1100px;
 margin-top: 50px;
   `
 const Wrapper = styled.div`
@@ -60,16 +69,17 @@ const Title = styled.h1`
   
   `
 const Infowrap = styled.div`
- 
+ margin: 30px auto;
   `
 
 const Info = styled.div`
  text-align: center;
+  font-size: 20px;
   `
 const Imgwrap = styled.div`
  width:100%;
 /* hieght: 100px; */
-  background-color: red;
+/*   background-color: red; */
 `
 
 
@@ -77,4 +87,27 @@ const Img = styled.img`
   width: 100%;
    object-fit: contain;
    
+  `
+const Circle = styled.div`
+  border-radius: 100%;
+  background-color:#e85425;
+    height: 100px;
+   width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+
+`
+
+const Circletext = styled.strong`
+
+
+`
+
+const Icon = styled(BsCodeSlash)`
+
+  background-color: blue;
   `
