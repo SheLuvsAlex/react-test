@@ -5,11 +5,20 @@ function Navbar() {
 
   return(
     <NavContainer>
-      <Navlink href="#home">Home</Navlink>
-  <Navlink href="#news">About</Navlink>
-  <Navlink href="#contact">Services</Navlink>
-      <Navlink href="#contact">Careers</Navlink>
-      <Navlink href="#contact">Contact</Navlink>
+      <Imgwrap>
+        <Img src = {'ddslogo.png'}/>
+      </Imgwrap>
+
+      
+      <Linkcontainer>
+           <Navlink href="#home">Home</Navlink>
+          <Navlink href="#news">About</Navlink>
+          <Navlink href="#contact">Services</Navlink>
+          <Navlink href="#contact">Careers</Navlink>
+          <Navlink href="#contact">Contact</Navlink>
+      
+      </Linkcontainer>
+ 
     </NavContainer>
   );
 
@@ -20,10 +29,11 @@ export default Navbar;
 const NavContainer = styled.div`
 overflow: hidden;
   background-color: White;
+  display: flex;
+  justify-content: space-between;
+   align-items:center;
+  height: 60px;
   
-  
-
- 
   `
 
 const Navlink = styled.a`
@@ -34,26 +44,31 @@ const Navlink = styled.a`
   padding: 14px;
   text-decoration: none;
   text-transform: uppercase;
+  font-family: 'PT Sans Narrow';
+  font-size: 18px;
   &: hover{
     color: #64AED9
   }
-    var navbar = document.getElementById("Navlink");
-var sticky = Navlink.offsetTop;
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-  &:sticky{
-    position: fixed;
-  top: 0;
-  width: 100%;
-    padding-top: 60px;
-  }
-  
-  
+   `
+
+
+
+const Linkcontainer = styled.div`
 
   
+`
+  
+const Imgwrap = styled.div`
+  height:75%;
+  margin: 0 40px;
+  
+  
+`
+const Img = styled.img`
+ object-fit: cover;
+    height: 100%;
+
+    &: hover{
+    cursor: pointer;
+  }
 `

@@ -24,13 +24,11 @@ function About() {
 
         <Imgwrap>
           <Img src={'trio.png'} />
-          <Circle>
-           
-            <Icon/>
-            <Circletext>
-                Development
-            </Circletext>
-          </Circle>
+
+          
+          <CircleComp title={'Development'}/>
+
+          
         </Imgwrap>
         
       </Wrapper>
@@ -40,6 +38,23 @@ function About() {
 }
 
 export default About;
+
+
+
+function CircleComp({title,color,postion,icon}){
+  return (
+    <Circle>
+    <Icon/>
+      <CircleText>
+        {title}
+      </CircleText>
+    </Circle>
+  )
+  
+} 
+
+
+
 
 const Container = styled.div`
 height: 700px;
@@ -65,6 +80,9 @@ const Title = styled.h1`
   margin: 7px auto;
   text-transform: uppercase;
   color: #5f6f7e;
+  font-family: 'PT Sans Narrow';
+  letter-spacing: 3px;
+  font-size: 37px;
 /*   background-color: blue; */
   
   `
@@ -75,9 +93,14 @@ const Infowrap = styled.div`
 const Info = styled.div`
  text-align: center;
   font-size: 20px;
+  font-family: "Open Sans", 'Arial';
+  font-color: #
+  
   `
 const Imgwrap = styled.div`
+  padding-top: 105px;
  width:100%;
+  position: relative;
 /* hieght: 100px; */
 /*   background-color: red; */
 `
@@ -86,28 +109,41 @@ const Imgwrap = styled.div`
 const Img = styled.img`
   width: 100%;
    object-fit: contain;
+  
    
   `
 const Circle = styled.div`
+  position: absolute;
+  top: 0px;
+  left: 37%;
   border-radius: 100%;
   background-color:#e85425;
-    height: 100px;
-   width: 100px;
+    height: 135px;
+   width: 135px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
+  z-index: -5;
+  
+@media screen and (max-width:576px){
+width: 105px;
+  height:105px;
+  
+}
+  
 
 
 `
 
 const Circletext = styled.strong`
 
+  font-family: 'PT Sans Narrow';
 
 `
 
 const Icon = styled(BsCodeSlash)`
+font-size: 43px;
 
-  background-color: blue;
   `
