@@ -26,7 +26,21 @@ function About() {
           <Img src={'trio.png'} />
 
           
-          <CircleComp title={'Development'}/>
+          <CircleComp 
+            title={'Development'} 
+            color = {'#e85425'} 
+            position = {[0,'','',37]}/>
+         <CircleComp 
+           title={'Analytics'} 
+           color = {'#5BAFE1'} 
+           position = {[0,'',40,'']}/>
+         <CircleComp
+           title={'Operations'} 
+           color = {'#A4d93A'} 
+           position = {['','',25,78]}/>
+          
+
+          
 
           
         </Imgwrap>
@@ -41,9 +55,9 @@ export default About;
 
 
 
-function CircleComp({title,color,postion,icon}){
+function CircleComp({title,color,position,icon}){
   return (
-    <Circle>
+    <Circle color = {color} position = {position}>
     <Icon/>
       <CircleText>
         {title}
@@ -94,7 +108,7 @@ const Info = styled.div`
  text-align: center;
   font-size: 20px;
   font-family: "Open Sans", 'Arial';
-  font-color: #
+/*   font-color: # */
   
   `
 const Imgwrap = styled.div`
@@ -114,11 +128,14 @@ const Img = styled.img`
   `
 const Circle = styled.div`
   position: absolute;
-  top: 0px;
-  left: 37%;
+  top: ${({position})=> (`${position[0]}%`)};
+  left: ${({position})=> (`${position[3]}%`)};
+  right: ${({position})=> (`${position[1]}%`)};
+  bottom: ${({position})=> (`${position[2]}%`)};
+  
   border-radius: 100%;
-  background-color:#e85425;
-    height: 135px;
+  background-color: ${({color})=> (color)};
+  height: 135px;
    width: 135px;
   display: flex;
   flex-direction: column;
@@ -137,7 +154,7 @@ width: 105px;
 
 `
 
-const Circletext = styled.strong`
+const CircleText = styled.strong`
 
   font-family: 'PT Sans Narrow';
 
@@ -147,3 +164,5 @@ const Icon = styled(BsCodeSlash)`
 font-size: 43px;
 
   `
+
+     // 
