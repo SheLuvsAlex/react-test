@@ -3,6 +3,7 @@ import Test from './components/test';
 import Navbar from './components/navbar';
 import Landing from './components/landing';
 import About from './components/about';
+import Services from './components/services'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar/>
       <Landing/>
        <About/> 
+      <Services/>
      
     </>
   );

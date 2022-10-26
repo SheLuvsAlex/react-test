@@ -1,17 +1,15 @@
 import styled from 'styled-components';
 import React from 'react'
-import {BsCodeSlash} from 'react-icons/bs';
-import {GoGraph} from 'react-icons/go';
-import {GoGear} from 'react-icons/go';
 
-function About() {
+
+function Services() {
 
   return(
     <Container>
       <Wrapper>
         
        <Titlewrap>
-        <Title><span style={{color: '#64AED9'}}>DDS</span> Inspires</Title>
+        <Title><span style={{color: '#64AED9'}}>Our</span> Services</Title>
         <span style = {{
       width: '73px',
       borderBottom: '2px solid #b7bbbf'
@@ -24,28 +22,7 @@ function About() {
          <Info>Has your organization hit a rut? Are you looking for a set of tools to hone your competitive edge? At DDS we have both the tools and the processes to help you establish a healthy discipline and approach to competition. We will design a program and follow up to position your company for success.</Info>
         </Infowrap>
 
-        <Imgwrap>
-          <Img src={'trio.png'} />
 
-          
-          <CircleComp 
-            title={'Development'} 
-            color = {'#e85425'} 
-            position = {[0,'','',37]}/>
-         <CircleComp 
-           title={'Analytics'} 
-           color = {'#5BAFE1'} 
-           position = {['','',2,4]}/>
-         <CircleComp
-           title={'Operations'} 
-           color = {'#A4d93A'} 
-           position = {['','',25,78]}/>
-          
-
-          
-
-          
-        </Imgwrap>
         
       </Wrapper>
     </Container>
@@ -53,7 +30,7 @@ function About() {
 
 }
 
-export default About;
+export default Services;
 
 
 
@@ -81,15 +58,14 @@ function CircleComp({title,color,position,icon}){
 
 const Container = styled.div`
 /* height: 700px; */
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   min-width: 600px;
   max-width: 1100px;
-margin-top: 50px;
-/*   background-color: red; */
+  background-color: rgb(246,246,246);
   `
 const Wrapper = styled.div`
-  width:100%;
+margin: auto 10px;
   `
 
 const Titlewrap = styled.div`
@@ -126,7 +102,7 @@ const Imgwrap = styled.div`
  width:100%;
   position: relative;
 /* hieght: 100px; */
-/*   background-color: blue; */
+/*   background-color: red; */
 `
 
 
