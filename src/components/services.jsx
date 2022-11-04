@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import React from 'react'
 
 
+
 function Services() {
 
   return(
@@ -9,7 +10,7 @@ function Services() {
       <Wrapper>
         
        <Titlewrap>
-        <Title><span style={{color: '#64AED9'}}>Our</span> Services</Title>
+        <Title><span style={{color: '#5f6f7e'}}>Our</span> Services</Title>
         <span style = {{
       width: '73px',
       borderBottom: '2px solid #b7bbbf'
@@ -20,7 +21,18 @@ function Services() {
         
         <Infowrap>
          <Info>Has your organization hit a rut? Are you looking for a set of tools to hone your competitive edge? At DDS we have both the tools and the processes to help you establish a healthy discipline and approach to competition. We will design a program and follow up to position your company for success.</Info>
+          
         </Infowrap>
+
+        <Servicewrap>
+          <Infobox>
+         <Infoicon></Infoicon>
+          <Infotext></Infotext> 
+            <Infotitle></Infotitle>
+          </Infobox>
+          
+          
+        </Servicewrap>
 
 
         
@@ -61,11 +73,11 @@ const Container = styled.div`
   width: 100%;
   margin: 0 auto;
   min-width: 600px;
-  max-width: 1100px;
   background-color: rgb(246,246,246);
   `
 const Wrapper = styled.div`
 margin: auto 10px;
+   max-width: 1100px;
   `
 
 const Titlewrap = styled.div`
@@ -75,13 +87,15 @@ const Titlewrap = styled.div`
   align-items: center;
   margin: 0px auto;
   overflow-x: visable;
+  padding-top:50px;
   `
 const Title = styled.h1`
   margin: 7px auto;
   text-transform: uppercase;
-  color: #5f6f7e;
+  color: #64AED9;
   font-family: 'PT Sans Narrow';
   letter-spacing: 3px;
+  word-spacing:0px;
   font-size: 37px;
 /*   background-color: blue; */
   
@@ -106,49 +120,19 @@ const Imgwrap = styled.div`
 `
 
 
-const Img = styled.img`
-  width: 100%;
-   object-fit: contain;
-  
-   
-  `
-const Circle = styled.div`
-  position: absolute;
-  top: ${({position})=> (`${position[0]}%`)};
-  left: ${({position})=> (`${position[3]}%`)};
-  right: ${({position})=> (`${position[1]}%`)};
-  bottom: ${({position})=> (`${position[2]}%`)};
-  
-  border-radius: 100%;
-  background-color: ${({color})=> (color)};
-  height: 135px;
-   width: 135px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  z-index: -5;
-  
-@media screen and (max-width:576px){
-width: 105px;
-  height:105px;
-  
-}
-  
-
-
-`
-
-const CircleText = styled.strong`
-
-  font-family: 'PT Sans Narrow';
-
-`
 
 const Iconwrap = styled.div`
 font-size: 43px;
 
-  `
+  `     // 
 
-     // 
+const Infoicon = styled.div`
+  `
+const Servicewrap = styled.div`
+`
+const Infobox = styled.div`
+`
+const Infotext = styled.div`
+`
+const Infotitle = styled.div`
+`
