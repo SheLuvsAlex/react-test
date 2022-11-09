@@ -1,3 +1,8 @@
+*{
+  outline: 1px red solid;
+}
+
+
 p{
  color: rgb(95,111,126);
   font-family: 'Open Sans', Arial, sans-serif;

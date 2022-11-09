@@ -25,11 +25,32 @@ function Services() {
         </Infowrap>
 
         <Servicewrap>
+          
           <Infobox>
          <Infoicon></Infoicon>
-          <Infotext></Infotext> 
-            <Infotitle></Infotitle>
+        <Infotitle>Decision Support</Infotitle>
+          <Infotext>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</Infotext> 
+           
           </Infobox>
+          <Infobox>
+         <Infoicon></Infoicon>
+        <Infotitle>Decision Support</Infotitle>
+          <Infotext>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</Infotext> 
+           
+          </Infobox>
+          <Infobox>
+         <Infoicon></Infoicon>
+        <Infotitle>Decision Support</Infotitle>
+          <Infotext>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</Infotext> 
+           
+          </Infobox>
+          <Infobox>
+         <Infoicon></Infoicon>
+        <Infotitle>Decision Support</Infotitle>
+          <Infotext>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</Infotext> 
+           
+          </Infobox>
+          
           
           
         </Servicewrap>
@@ -129,10 +150,24 @@ font-size: 43px;
 const Infoicon = styled.div`
   `
 const Servicewrap = styled.div`
+
+  display: flex;
+ 
 `
 const Infobox = styled.div`
+  margin: 0 10px;
 `
 const Infotext = styled.div`
+   font-size: 15px;
+  margin: 15px auto;
+  font-family: "Open Sans", 'Arial';
+  color: rgb(95,111,126);
 `
 const Infotitle = styled.div`
+   font-size: 20px;
+  margin: 15px auto;
+  font-family: "Open Sans", 'Arial';
+  color: rgb(95,111,126);
+  font-weight: bold;
+  
 `
