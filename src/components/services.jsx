@@ -1,5 +1,33 @@
 import styled from 'styled-components';
 import React from 'react'
+import {FaCube} from 'react-icons/fa';
+import {AiOutlineDashboard} from 'react-icons/ai';
+import {GrTerminal} from 'react-icons/gr';
+import {TbPuzzle} from 'react-icons/tb';
+
+var serviceslist = [
+  {
+    title: 'Decision Support',
+    body: 'It is not enough to develop Business Intelligence capability, visualization software or hire data scientists to perform predictive analysis against large data sets, to solve your most challenging questions and generate business advantage you will need solutions that are as efficient as they are effective. We develop the full practice of decision support systems, operations and lifecycle to ensure your solution is sustainable and delivers the value your business needs to be competitive! Click Here!',
+    icon: <FaCube/>
+  },
+  {
+    title: 'Systems Engineering',
+    body: "Leveraging technology is critical in today's business. We can help modernize,     efficiently operate, perform cloud migration or plan capability necessary for your business to grow. Many small and medium size companies find that outsourcing administration of thier IT capability can save costs. We can help generate options for both soultions and management. Click Here!",
+    icon: <AiOutlineDashboard/>
+  },
+  {
+    title: 'Software Development',
+    body: 'Managing a professional software engineering department can be difficult and expensive. DDS has an experienced team of developers that can quickly help you implement solutions to your toughest problems.',
+    icon: <GrTerminal/>
+  },
+  {
+    title: 'Special  Solutions',
+    body: "Our team members have experiance in some of the toughest operational environemnts supporting Special Operations and other units where failure is not an option. We specialize in working with our clients in developing those special projects that are critical to mission success, in any environment, anywhere in the world!. Click Here!",
+    icon: <TbPuzzle/>
+  },
+]
+
 
 
 
@@ -25,31 +53,18 @@ function Services() {
         </Infowrap>
 
         <Servicewrap>
+
+
+          {serviceslist.map((item,index)=>{
+            return (<Infobox>
+             <Infoicon></Infoicon>
+            <Infotitle>{item.title}</Infotitle>
+            <Infotext>{item.body}</Infotext> 
+                   
+          </Infobox>);
+      
+          })}
           
-          <Infobox>
-         <Infoicon></Infoicon>
-        <Infotitle>Decision Support</Infotitle>
-          <Infotext>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</Infotext> 
-           
-          </Infobox>
-          <Infobox>
-         <Infoicon></Infoicon>
-        <Infotitle>Decision Support</Infotitle>
-          <Infotext>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</Infotext> 
-           
-          </Infobox>
-          <Infobox>
-         <Infoicon></Infoicon>
-        <Infotitle>Decision Support</Infotitle>
-          <Infotext>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</Infotext> 
-           
-          </Infobox>
-          <Infobox>
-         <Infoicon></Infoicon>
-        <Infotitle>Decision Support</Infotitle>
-          <Infotext>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</Infotext> 
-           
-          </Infobox>
           
           
           
@@ -150,24 +165,42 @@ font-size: 43px;
 const Infoicon = styled.div`
   `
 const Servicewrap = styled.div`
-
+justify-content: center;
   display: flex;
  
 `
 const Infobox = styled.div`
   margin: 0 10px;
+  width: 24%;
+  max-width: 300px;
 `
-const Infotext = styled.div`
-   font-size: 15px;
-  margin: 15px auto;
-  font-family: "Open Sans", 'Arial';
-  color: rgb(95,111,126);
-`
-const Infotitle = styled.div`
-   font-size: 20px;
+
+const Infotitle = styled.h3`
+   font-size: 18px;
   margin: 15px auto;
   font-family: "Open Sans", 'Arial';
   color: rgb(95,111,126);
   font-weight: bold;
+  text-align: center;
   
 `
+const Infotext = styled.p`
+   font-size: 14px;
+  margin: 15px auto;
+  font-family: "Open Sans", 'Arial';
+  color: rgb(95,111,126);
+  text-align: center;
+  font-weight:300;
+`
+
+
+
+
+
+
+
+
+
+
+
+
